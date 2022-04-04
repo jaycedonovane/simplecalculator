@@ -1,0 +1,46 @@
+import sys
+
+LISTE = []
+
+MENU = """chose your operation
+1: addition
+2: soustraction
+3: divide
+4: multiply
+5: Leave
+    your choice : """
+
+MENU_CHOICE = ["1","2","3","4","5"]
+
+while True:
+    user_choice = " "
+    while user_choice not in MENU_CHOICE:
+        user_choice = input (MENU)
+        if  user_choice not in MENU_CHOICE:
+            print("take a  valide option ")
+
+    if user_choice is "1":
+        num1 = float(input("Enter first number: "))
+        num2 = float(input("Enter second number: "))
+        print(num1 + num2)
+
+    if user_choice is "2":
+        num1 = float(input("Enter first number: "))
+        num2 = float(input("Enter second number: "))
+        print(num1 - num2)
+
+    if user_choice is "3":
+        num1 = float(input("Enter first number: "))
+        num2 = float(input("Enter second number: "))
+        print(num1 / num2)
+    
+    if user_choice is "4":
+        num1 = float(input("Enter first number: "))
+        num2 = float(input("Enter second number: "))
+        print(num1 * num2)
+
+    elif user_choice == '5':
+        print("HAve nice day! from France")
+        sys.exit()
+
+    print("-" * 30)
